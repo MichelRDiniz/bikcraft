@@ -60,3 +60,23 @@
     font-size: 1rem;
   }
 }
+
+
+.titulo-bg{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--cor-11);
+}
+
+@media (max-with: 800px){
+  .titulo-bg{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  }
+
+  .titulo {
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+}
