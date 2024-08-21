@@ -25,9 +25,7 @@ const elemento = document.getElementById(parametro);
 parametros.forEach(ativarProduto)
 
 // Ativar Perguntas Frequentes
-
 const perguntas = document.querySelectorAll('.perguntas button')
-
 
 function ativarPergunta(event) {
   const pergunta = event.currentTarget;
@@ -38,7 +36,6 @@ function ativarPergunta(event) {
   const ativa = resposta.classList.contains("ativa");
   pergunta.setAttribute("aria-expanded", ativa);
   console.log(resposta)
-
 }
 
 function eventoPerguntas(pergunta){
