@@ -13,19 +13,19 @@ links.forEach(ativarLink);
 
 //Ativar Items do Orçamento;
 
-const parametros = new URLSearchParams(location.search)
+const parametros = new URLSearchParams(location.search);
 
-function ativarProduto(parametro){
-const elemento = document.getElementById(parametro);
+function ativarProduto(parametro) {
+  const elemento = document.getElementById(parametro);
   if (elemento) {
-    elemento.checked = true
+    elemento.checked = true;
   }
 }
 
-parametros.forEach(ativarProduto)
+parametros.forEach(ativarProduto);
 
 // Ativar Perguntas Frequentes
-const perguntas = document.querySelectorAll('.perguntas button')
+const perguntas = document.querySelectorAll(".perguntas button");
 
 function ativarPergunta(event) {
   const pergunta = event.currentTarget;
@@ -35,36 +35,36 @@ function ativarPergunta(event) {
   resposta.classList.toggle("ativa");
   const ativa = resposta.classList.contains("ativa");
   pergunta.setAttribute("aria-expanded", ativa);
-  console.log(resposta)
+  console.log(resposta);
 }
 
-function eventoPerguntas(pergunta){
-  pergunta.addEventListener('click', ativarPergunta)
+function eventoPerguntas(pergunta) {
+  pergunta.addEventListener("click", ativarPergunta);
 }
 
 perguntas.forEach(eventoPerguntas);
 
 //Galeria de Bicicletas
 
-const galeria = document.querySelectorAll('.bicicleta-imagens img');
-const galeriaContainer = document.querySelector('.bicicleta-imagens');
+const galeria = document.querySelectorAll(".bicicleta-imagens img");
+const galeriaContainer = document.querySelector(".bicicleta-imagens");
 
 function trocarImagem(event) {
   const img = event.currentTarget;
   const media = matchMedia("(min-width: 1000px)").matches;
 
-  if(media){
+  if (media) {
     galeriaContainer.prepend(img);
   }
 }
 
 function eventosGaleria(img) {
-  img.addEventListener('click', trocarImagem);
+  img.addEventListener("click", trocarImagem);
 }
 
 galeria.forEach(eventosGaleria);
 
 //Animação
-if (window.SimpleAnime){
+if (window.SimpleAnime) {
   new SimpleAnime();
 }

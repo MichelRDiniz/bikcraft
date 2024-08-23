@@ -24,10 +24,9 @@
   margin-bottom: 32px;
 }
 
-
 .seguro p {
   margin-bottom: 20px;
-  }
+}
 
 @media (max-width: 800px) {
   .seguro-bg {
